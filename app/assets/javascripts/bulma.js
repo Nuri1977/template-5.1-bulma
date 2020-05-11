@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("turbolinks:load", () => {
   (document.querySelectorAll('.notification .delete') || []).forEach(($delete) => {
     $notification = $delete.parentNode;
 
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("turbolinks:load", () => {
 
   // Get all "navbar-burger" elements
   const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
@@ -31,6 +31,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
       });
     });
+  }
+
+});
+
+document.addEventListener("turbolinks:load", function() {
+
+  var notification = document.querySelector('.global-notification');
+
+  if(notification) {
+    window.setTimeout(function() {
+      notification.style.display = "none";
+    }, 4000);
   }
 
 });

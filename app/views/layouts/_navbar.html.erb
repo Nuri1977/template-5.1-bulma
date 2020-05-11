@@ -1,4 +1,4 @@
-<nav class="navbar is-info" role="navigation" aria-label="main navigation">
+<nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <%= link_to "eCommerce app", root_path, class: "navbar-item is-size-5" %>
     <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -15,7 +15,7 @@
 
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
-          Hiring Designers?
+          Dropdaoen Menu 1
         </a>
 
         <div class="navbar-dropdown">
@@ -40,17 +40,17 @@
       <div class="navbar-item">
         <div class="buttons">
           <% if user_signed_in? %>
-            <%= link_to edit_user_registration_path(current_user) , class: "button is-info is-inverted" do %>
+            <%= link_to edit_user_registration_path(current_user) , class: "button" do %>
               <i class="fa fa-edit"> <%= current_user.username %>'s profile</i>  
             <% end %>
-            <%= link_to destroy_user_session_path , method: :delete, class: "button is-info" do %>
+            <%= link_to destroy_user_session_path , method: :delete, class: "button" do %>
               <i class="fa fa-user"> Log out</i>  
             <% end %>
           <% else %>
-            <%= link_to new_user_session_path , class: "button is-info is-inverted" do %>
+            <%= link_to new_user_session_path , class: "button" do %>
               <i class="fa fa-user"> Log in</i>  
             <% end %>
-            <%= link_to new_user_registration_path , class: "button is-info is-inverted" do %>
+            <%= link_to new_user_registration_path , class: "button" do %>
               <i class="fa fa-user-plus"> Sign Up</i>  
             <% end %>
           <% end %>
